@@ -1,0 +1,416 @@
+/* COLOUR SCHEME
+
+#13384a main dark blue
+#34d29f accent turquoise
+#e4403f second accent colour
+aliceblue text colour
+
+*/
+
+
+/* IMPORT FONTS */
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@500&display=swap');
+@import url("https://use.typekit.net/uwd4mgs.css");
+
+/* Welcome Homie Font */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+/* FAQ Body Font */
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap'); 
+
+@font-face {
+    font-family: myFirstFont;
+    src: url("fonts/northsidenbp-font/Northsidenbp-3jYz.ttf");
+}
+
+/* GLOBAL STYLING */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #13384a;
+    font-family:'Oswald', sans-serif;
+}
+
+/* -- HEADER STYLING --*/
+
+li, a {
+    color: aliceblue;
+    font-size: 48;
+    text-decoration: none;
+}
+
+header {
+    background-color: #13384a;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 10%;
+    overflow: hidden;
+}
+
+.logo {
+    max-width: 300px;
+    cursor: pointer;
+}
+
+/* STYLES NAV BAR LINKS AS A GROUP */
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    font-family:"Roboto Slab", sans-serif;
+    font-size: 28px;
+    margin: 0px 20px;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.nav_links a:hover {
+    text-shadow: 0 0 9px rgba(52,210,159,.9),0 0 9px rgba(52,210,159,.9),0 0 9px rgba(52,210,159,.9);
+
+    /* text-shadow: 0 0 9px rgba(37,146,238,.9),0 0 9px rgba(37,146,238,.9),0 0 9px rgba(37,146,238,.9); */
+}
+
+.nav_links a.active {
+    background-color: #13384a;
+    color: #34d29f;
+    text-shadow: none;
+}
+
+@media screen and (max-width: 500px) {
+    .nav_links a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+}
+/* -- HOMEPAGE CSS STYLING -- */
+
+.homepage-quote {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+body#homepage h2 {
+    text-align: center;
+    font-family: "chauncy-pro", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 7em;
+    color: aliceblue;
+    margin: 10px; 
+}
+
+body#homepage hr {
+    color: #e4403f;
+    height: 2px;
+    margin: auto;
+    width: 50%;
+}
+
+
+.homepage-content {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.homepage-content .homepage-text {
+    padding: 0 5% 5% 5%;
+    text-align: justify;
+    font-size: 1.6em;
+    color: aliceblue;
+}
+
+.homepage-content .homepage-text h2 {
+    text-align: center;
+    font-family: "chauncy-pro", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 5em;
+    margin: 20px;
+    padding: 20px; 
+}
+
+.homepage-text h3 {
+    margin: 20px 10px 10px 10px;
+    padding: 10px;
+    color:#34d29f;
+    font-size: 1.5em;
+    border-color: #e4403f;
+    width: 40%;
+    text-transform: uppercase;
+}
+
+.homepage-text p {
+    margin: 10px;
+    padding: 10px;
+}
+
+.homepage-content img {
+    max-width: 600px;
+    height: fit-content;
+    margin: 0 60px;
+}
+
+.homepage-content .homepage-helmet {
+    flex-basis: 40%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+body#homepage hr {
+    height: 2px;
+    position: relative;
+}
+
+
+/* ---------------------------------------------
+            FAQs CSS STYLING 
+----------------------------------------------*/
+
+.faq-heading{
+    border-bottom: #777;
+    padding: 30px 20%;
+    font-size: 56px;
+    color: aliceblue;
+}
+
+.faq-container{
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+
+.hr-line{
+  width: 60%;
+  margin: auto;
+}
+
+/* Style the buttons that are used to open and close the faq-page body */
+.faq-page {
+    /* background-color: #eee; */
+    color: aliceblue;
+    cursor: pointer;
+    padding: 30px 20px;
+    width: 60%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin: 10px auto;
+    font-family: "Roboto Slab", sans-serif;
+    border-style: solid;
+}
+
+/* Add a background color to the button if it is clicked on */
+/* .activeFaq, */
+.faq-page:hover {
+    color:#34d29f;
+    border-color: aliceblue;
+}
+/* Style the faq-page panel. Note: hidden by default */
+.faq-body {
+    margin: auto;
+    /* text-align: center; */
+    padding: auto;
+    padding: 10px 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 55%; 
+    /* border-style: solid;
+    border-color: #34d29f; */
+    color: aliceblue;
+    display: none;
+    overflow: hidden;
+    font-family: 'Radio Canada', sans-serif;
+}
+.faq-body h4 {
+    margin-top: 20px;
+    color: #34d29f;
+    font-size: larger;
+}
+
+.faq-body .no-bullets {
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+.bullets {
+    padding-left: 30px;
+}
+
+.multi-paragraph {
+    padding-top: 10px;
+}
+
+.faq-body .bold {
+    font-weight: 800;
+}
+
+.faq-page:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: aliceblue;
+    float: right;
+    margin-left: 5px;
+}
+
+.activeFaq {
+    box-shadow: 0 0 9px rgba(0,0,0,.9),0 0 9px rgba(52,210,159,.9),0 0 9px rgba(52,210,159,.9);
+}
+
+.activeFaq:after {
+    content: "\2796"  /* Unicode character for "minus" sign (-) */
+}
+
+/* ---------------------------------------------
+            101 CSS STYLING 
+----------------------------------------------*/
+
+/* ---------------------------------------------
+            BLOG CSS STYLING 
+----------------------------------------------*/
+
+.under-construction {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+    font-size: 100px;
+    margin-top: 50px;
+}
+.under-construction hr {
+    height:2px;
+    border-width:0;
+    color:#34d29f;
+    background-color: #34d29f;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.under-construction p {
+    margin-bottom: 20px;
+}
+
+/* ---------------------------------------------
+            ABOUT US CSS STYLING 
+----------------------------------------------*/
+
+body#aboutus {
+    background-image: url("/images/helmet_cropped.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    width: 100%; 
+}
+
+.about-text {
+    margin: 100px 100px 0 100px;
+    width: 800px;
+}
+
+.about-text h1 {
+    padding-top: 20px;
+    margin: 20px 100px 30px 100px;
+    font-size: 7em;
+    font-family: filmotype-ace, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    background-color: #34d29f;
+    width: 600px;
+}
+
+.about-text img {
+    max-width: 750px;
+    align-content: center;
+    margin: 10px 0;
+}
+
+.about-text hr {
+    height:4px;
+    border-width:0;
+    color: #e4403f;
+    background-color: #e4403f;
+}
+
+.about-text h5 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 3em;
+}
+
+.about-text p {
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+.about-text .left-text {
+    text-align: left;
+}
+
+.team  {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.fa-brands {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    color: #13384a;
+  }
+
+  .fa-brands:hover {
+    opacity: 0.7;
+}
+
+/* ---------------------------------------------
+            FOOTER CSS STYLING 
+----------------------------------------------*/
+
+footer {
+    margin: 100px 0;
+    text-align: center;
+    padding: 3px;
+    color: aliceblue;
+    background-color: #34d29f;
+}
+
+.footer {
+    background-color: #13384a;
+    padding: 20px;
+    width: 100%;
+    position: absolute;
+}
+
+footer .fa-brands {
+    color: aliceblue;
+    margin: 5px;
+}
